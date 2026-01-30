@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+
+.enquiry-container {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1c4b5a, #06151c);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.enquiry-box {
+  width: 720px;
+  padding: 35px;
+  border: 2px solid #7fb2c8;
+  background: rgba(0, 0, 0, 0.55);
+  color: #ffffff;
+}
+
+.enquiry-box h2 {
+  text-align: center;
+  letter-spacing: 3px;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 13px;
+  color: #cfe3ec;
+  margin-bottom: 25px;
+}
+
+/* 👇 MAIN ALIGNMENT FIX */
+.form-group {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  align-items: center;
+  margin-bottom: 16px;
+  column-gap: 15px;
+}
+
+.form-group label {
+  font-size: 14px;
+  color: #d7eef7;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 9px 10px;
+  background: transparent;
+  border: 1px solid #7fb2c8;
+  color: white;
+  font-size: 14px;
+}
+
+.form-group textarea {
+  resize: none;
+  height: 90px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #9fc3d3;
+}
+
+/* BUTTON ALIGNMENT */
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.btn {
+  padding: 9px 26px;
+  border: none;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.submit {
+  background-color: #f37021;
+}
+
+.reset {
+  background-color: #e85b3a;
+}
