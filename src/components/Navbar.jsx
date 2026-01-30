@@ -4,53 +4,24 @@ function Navbar() {
   return (
     <nav style={styles.nav}>
       <div style={styles.menu}>
-        
-        {/* HOME */}
-        <NavLink
-          to="/"
-          end
-          style={({ isActive }) =>
-            isActive ? styles.activeBtn : styles.inactiveBtn
-          }
-        >
+
+        <NavLink to="/" end style={navStyle}>
           Home
         </NavLink>
 
-        {/* PRODUCTS */}
-        <NavLink
-          to="/products"
-          style={({ isActive }) =>
-            isActive ? styles.activeBtn : styles.inactiveBtn
-          }
-        >
+        <NavLink to="/products" style={navStyle}>
           Products
         </NavLink>
-        
-        <NavLink
-          to="/certificate"
-          style={({ isActive }) =>
-            isActive ? styles.activeBtn : styles.inactiveBtn
-          }
-        >
+
+        <NavLink to="/certificate" style={navStyle}>
           Certificate
         </NavLink>
 
-        <NavLink
-          to="/contact"
-          style={({ isActive }) =>
-            isActive ? styles.activeBtn : styles.inactiveBtn
-          }
-        >
+        <NavLink to="/contact" style={navStyle}>
           Contact
         </NavLink>
 
-        {/* ENQUIRY */}
-        <NavLink
-          to="/enquiry"
-          style={({ isActive }) =>
-            isActive ? styles.activeBtn : styles.inactiveBtn
-          }
-        >
+        <NavLink to="/enquiry" style={navStyle}>
           Enquiry
         </NavLink>
 
@@ -58,6 +29,9 @@ function Navbar() {
     </nav>
   );
 }
+
+const navStyle = ({ isActive }) =>
+  isActive ? styles.activeBtn : styles.inactiveBtn;
 
 const styles = {
   nav: {
@@ -74,17 +48,14 @@ const styles = {
     display: "flex",
     gap: "20px"
   },
-
-  // 🔴 Normal (BLACK)
   inactiveBtn: {
     color: "#fff",
     backgroundColor: "#000",
     padding: "8px 16px",
     textDecoration: "none",
-    fontSize: "16px"
+    fontSize: "16px",
+    borderRadius: "20px"
   },
-
-  // 🟡 Active (YELLOW)
   activeBtn: {
     color: "#000",
     backgroundColor: "#FFD700",
