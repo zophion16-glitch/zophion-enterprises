@@ -36,7 +36,7 @@ function Products() {
         style={{
           textAlign: "center",
           marginBottom: "40px",
-          color: "#fff",
+          color: "#000",
         }}
       >
         OUR SERVICES

@@ -1,74 +1,94 @@
-import React, { useState } from "react";
-import "../styles/EnquiryForm.css";
-
-const Enquiry = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    billNumber: "",
-    phone: "",
-    enquiry: "",
-  });
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert("Enquiry Submitted");
-  };
-
-  const handleReset = () => {
-    setFormData({
-      name: "",
-      email: "",
-      billNumber: "",
-      phone: "",
-      enquiry: "",
-    });
-  };
-
+function Enquiry() {
   return (
-    <div className="enquiry-container">
-      <div className="enquiry-box">
-        <h2>ENQUIRY FORM</h2>
-        <p className="subtitle">Our team will contact you shortly</p>
+    <div style={styles.page}>
+      <div style={styles.card}>
+        <h2 style={styles.title}>Enquiry Form</h2>
+        <p style={styles.subtitle}>
+          Please fill the form below. We will contact you soon.
+        </p>
 
-        <form onSubmit={handleSubmit}>
-          <div className="form-group">
-            <label>Name</label>
-            <input name="name" placeholder="Customer Name" value={formData.name} onChange={handleChange} />
-          </div>
+        <form style={styles.form}>
+          <input type="text" placeholder="Full Name" style={styles.input} />
+          <input type="email" placeholder="Email Address" style={styles.input} />
+          <input type="tel" placeholder="Mobile Number" style={styles.input} />
 
-          <div className="form-group">
-            <label>Email</label>
-            <input name="email" placeholder="mail@example.com" value={formData.email} onChange={handleChange} />
-          </div>
+          <select style={styles.input}>
+            <option value="">Select Service</option>
+            <option>Export & Import</option>
+            <option>Cosmetics</option>
+            <option>Manpower</option>
+            <option>Website Designing</option>
+          </select>
 
-          <div className="form-group">
-            <label>Bill No</label>
-            <input name="billNumber" placeholder="Bill Number" value={formData.billNumber} onChange={handleChange} />
-          </div>
+          <textarea
+            placeholder="Your Message"
+            rows="4"
+            style={styles.textarea}
+          ></textarea>
 
-          <div className="form-group">
-            <label>Phone</label>
-            <input name="phone" placeholder="Phone Number" value={formData.phone} onChange={handleChange} />
-          </div>
-
-          <div className="form-group">
-            <label>Enquiry</label>
-            <textarea name="enquiry" placeholder="Your Query" value={formData.enquiry} onChange={handleChange} />
-          </div>
-
-          <div className="button-group">
-            <button className="btn submit" type="submit">SUBMIT</button>
-            <button className="btn reset" type="button" onClick={handleReset}>RESET</button>
-          </div>
+          <button type="submit" style={styles.button}>
+            Send Enquiry
+          </button>
         </form>
       </div>
     </div>
   );
+}
+
+const styles = {
+  page: {
+    minHeight: "100vh",
+    backgroundColor: "#fff9e6", // same yellow tone
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "40px"
+  },
+  card: {
+    backgroundColor: "#ffffff",
+    padding: "40px",
+    borderRadius: "16px",
+    width: "100%",
+    maxWidth: "500px",
+    boxShadow: "0 10px 30px rgba(0,0,0,0.1)"
+  },
+  title: {
+    textAlign: "center",
+    marginBottom: "10px",
+    fontSize: "26px"
+  },
+  subtitle: {
+    textAlign: "center",
+    marginBottom: "30px",
+    color: "#555"
+  },
+  form: {
+    display: "flex",
+    flexDirection: "column",
+    gap: "15px"
+  },
+  input: {
+    padding: "12px",
+    borderRadius: "8px",
+    border: "1px solid #ccc",
+    fontSize: "15px"
+  },
+  textarea: {
+    padding: "12px",
+    borderRadius: "8px",
+    border: "1px solid #ccc",
+    fontSize: "15px"
+  },
+  button: {
+    marginTop: "10px",
+    padding: "12px",
+    backgroundColor: "#FFD700",
+    border: "none",
+    borderRadius: "25px",
+    fontSize: "16px",
+    fontWeight: "600",
+    cursor: "pointer"
+  }
 };
 
 export default Enquiry;

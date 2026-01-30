@@ -32,9 +32,16 @@ function Products() {
 
   return (
     <section style={{ padding: "40px" }}>
-      <h2 style={{ textAlign: "center", marginBottom: "40px" }}>
-        OUR PRODUCTS
+      <h2
+        style={{
+          textAlign: "center",
+          marginBottom: "40px",
+          color: "#000",
+        }}
+      >
+        OUR PRODUCT
       </h2>
+
 
       <div
         style={{
@@ -44,7 +51,6 @@ function Products() {
           flexWrap: "wrap",
         }}
       >
-
         {/* Export & Import */}
         <div
           style={cardStyle}
@@ -57,56 +63,90 @@ function Products() {
           }
         >
           <div style={imageBoxStyle}>
-            <img src="/export-import.jpg" alt="Export Import" style={imgStyle} />
+            <img
+              src="/export-import.jpg"
+              alt="Export & Import"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}
+            />
           </div>
           <div style={textBoxStyle}>
             <h3>Export & Import</h3>
-            <p>End-to-end global trade services.</p>
+            <p>
+              End-to-end export and import services connecting global markets
+              efficiently.
+            </p>
           </div>
         </div>
 
-        {/* Blyzza */}
+        {/* Blyzza Cosmetics */}
         <div style={cardStyle}>
           <div style={imageBoxStyle}>
-            <img src="/blyzza.jpg" alt="Blyzza" style={imgStyle} />
+            <img
+              src="/blyzza.jpg"
+              alt="Blyzza Cosmetics"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "contain",
+              }}
+            />
           </div>
           <div style={textBoxStyle}>
             <h3>Blyzza Cosmetics</h3>
-            <p>Premium cosmetic products.</p>
+            <p>
+              High-quality cosmetic products meeting global standards.
+            </p>
           </div>
         </div>
 
         {/* Manpower */}
         <div style={cardStyle}>
           <div style={imageBoxStyle}>
-            <img src="/manpower.jpg" alt="Manpower" style={imgStyle} />
+            <img
+              src="/manpower.jpg"
+              alt="Manpower"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "contain",
+              }}
+            />
           </div>
           <div style={textBoxStyle}>
             <h3>Manpower</h3>
-            <p>Trusted manpower solutions.</p>
+            <p>
+              Reliable manpower solutions for various industries.
+            </p>
           </div>
         </div>
 
-        {/* Website */}
+        {/* Website Designing */}
         <div style={cardStyle}>
           <div style={imageBoxStyle}>
-            <img src="/website.jpg" alt="Website" style={imgStyle} />
+            <img
+              src="/website.jpg"
+              alt="Website Designing"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "contain",
+              }}
+            />
           </div>
           <div style={textBoxStyle}>
             <h3>Website Designing</h3>
-            <p>Modern responsive websites.</p>
+            <p>
+              Modern, responsive, and professional website design services.
+            </p>
           </div>
         </div>
-
       </div>
     </section>
   );
 }
-
-const imgStyle = {
-  width: "100%",
-  height: "100%",
-  objectFit: "cover",
-};
 
 export default Products;

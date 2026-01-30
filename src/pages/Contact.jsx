@@ -29,7 +29,7 @@ function Contact() {
           boxShadow: "0 20px 40px rgba(0,0,0,0.08)",
           display: "flex",
           justifyContent: "center",
-          gap: "30px",
+          gap: "50px",
           flexWrap: "wrap",
         }}
       >
@@ -38,25 +38,10 @@ function Contact() {
           href="https://wa.me/919600411019?text=Hello%20Zophion%20Enterprises,%20we%20are%20interested%20in%20export%20products"
           target="_blank"
           rel="noreferrer"
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            width: "100px",
-            height: "100px",
-            background: "#25D366",
-            color: "#fff",
-            borderRadius: "50%",
-            fontSize: "36px",
-            textDecoration: "none",
-            padding: "10px",
-          }}
+          style={iconStyle}
         >
-          <FaWhatsapp />
-          <span style={{ marginTop: "8px", fontWeight: "600", fontSize: "16px" }}>
-            WhatsApp
-          </span>
+          <FaWhatsapp color="#25D366" />
+          <span style={labelStyle}>WhatsApp</span>
         </a>
 
         {/* Gmail */}
@@ -64,25 +49,10 @@ function Contact() {
           href="https://mail.google.com/mail/?view=cm&fs=1&to=zophion16@gmail.com&su=Business%20Inquiry&body=Hello%20Zophion%20Enterprises,%0A%0AI%20am%20interested%20in%20your%20services."
           target="_blank"
           rel="noreferrer"
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            width: "100px",
-            height: "100px",
-            background: "linear-gradient(135deg, #8B0000, #B22222)",
-            color: "#fff",
-            borderRadius: "50%",
-            fontSize: "36px",
-            textDecoration: "none",
-            padding: "10px",
-          }}
+          style={iconStyle}
         >
-          <FaEnvelope />
-          <span style={{ marginTop: "8px", fontWeight: "600", fontSize: "16px" }}>
-            Gmail
-          </span>
+          <FaEnvelope color="#B22222" />
+          <span style={labelStyle}>Gmail</span>
         </a>
 
         {/* Instagram */}
@@ -90,26 +60,10 @@ function Contact() {
           href="https://www.instagram.com/blyzza_herbs/"
           target="_blank"
           rel="noreferrer"
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            width: "100px",
-            height: "100px",
-            background:
-              "linear-gradient(135deg, #f58529, #dd2a7b, #8134af, #515bd4)",
-            color: "#fff",
-            borderRadius: "50%",
-            fontSize: "36px",
-            textDecoration: "none",
-            padding: "10px",
-          }}
+          style={iconStyle}
         >
-          <FaInstagram />
-          <span style={{ marginTop: "8px", fontWeight: "600", fontSize: "16px" }}>
-            Instagram
-          </span>
+          <FaInstagram color="#dd2a7b" />
+          <span style={labelStyle}>Instagram</span>
         </a>
       </div>
 
@@ -125,5 +79,22 @@ function Contact() {
     </section>
   );
 }
+
+const iconStyle = {
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  textDecoration: "none",
+  fontSize: "48px",
+  transition: "transform 0.3s ease",
+};
+
+const labelStyle = {
+  marginTop: "10px",
+  fontWeight: "600",
+  fontSize: "16px",
+  color: "#333",
+};
 
 export default Contact;
