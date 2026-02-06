@@ -90,7 +90,7 @@ function Contact() {
 
         {/* LinkedIn */}
         <a
-          href="https://www.linkedin.com/company/zophion-enterprises"
+          href="https://www.linkedin.com/in/zophion-enterprises-62a0783ab?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
           target="_blank"
           rel="noreferrer"
           style={iconStyle}
@@ -103,7 +103,7 @@ function Contact() {
 
         {/* Facebook */}
         <a
-          href="https://www.facebook.com/zophionenterprises"
+          href="https://www.facebook.com/Zophion Traders"
           target="_blank"
           rel="noreferrer"
           style={iconStyle}
