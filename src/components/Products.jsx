@@ -9,7 +9,7 @@ function Products() {
     borderRadius: "20px",
     backgroundColor: "#F9E076",
     boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
-    overflow: "hidden",
+    // overflow: "hidden",
     display: "flex",
     flexDirection: "column",
     textAlign: "center",
@@ -83,8 +83,16 @@ function Products() {
         </div>
 
         {/* Blyzza Cosmetics */}
-        <div style={cardStyle}>
-          <div style={imageBoxStyle}>
+        <div
+          style={cardStyle}
+          onClick={() => navigate("/blyzza")}
+          onMouseEnter={(e) =>
+            (e.currentTarget.style.transform = "translateY(-8px)")
+          }
+          onMouseLeave={(e) =>
+            (e.currentTarget.style.transform = "translateY(0)")
+          }
+        >          <div style={imageBoxStyle}>
             <img
               src="/blyzza.jpg"
               alt="Blyzza Cosmetics"

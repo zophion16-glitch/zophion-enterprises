@@ -83,7 +83,16 @@ function Products() {
         </div>
 
         {/* Blyzza Cosmetics */}
-        <div style={cardStyle}>
+        <div
+          style={cardStyle}
+          onClick={() => navigate("/blyzza")}
+          onMouseEnter={(e) =>
+            (e.currentTarget.style.transform = "translateY(-8px)")
+          }
+          onMouseLeave={(e) =>
+            (e.currentTarget.style.transform = "translateY(0)")
+          }
+        >
           <div style={imageBoxStyle}>
             <img
               src="/blyzza.jpg"

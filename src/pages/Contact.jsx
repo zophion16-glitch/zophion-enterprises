@@ -1,6 +1,22 @@
-import { FaWhatsapp, FaEnvelope, FaInstagram } from "react-icons/fa";
+import {
+  FaWhatsapp,
+  FaEnvelope,
+  FaInstagram,
+  FaLinkedin,
+  FaFacebook,
+} from "react-icons/fa";
 
 function Contact() {
+
+  // 👉 hover handlers
+  const handleMouseEnter = (e) => {
+    e.currentTarget.style.transform = "scale(1.1)";
+  };
+
+  const handleMouseLeave = (e) => {
+    e.currentTarget.style.transform = "scale(1)";
+  };
+
   return (
     <section
       style={{
@@ -35,10 +51,12 @@ function Contact() {
       >
         {/* WhatsApp */}
         <a
-          href="https://wa.me/919600411019?text=Hello%20Zophion%20Enterprises,%20we%20are%20interested%20in%20export%20products"
+          href="https://wa.me/919600411019"
           target="_blank"
           rel="noreferrer"
           style={iconStyle}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
         >
           <FaWhatsapp color="#25D366" />
           <span style={labelStyle}>WhatsApp</span>
@@ -46,10 +64,12 @@ function Contact() {
 
         {/* Gmail */}
         <a
-          href="https://mail.google.com/mail/?view=cm&fs=1&to=zophion16@gmail.com&su=Business%20Inquiry&body=Hello%20Zophion%20Enterprises,%0A%0AI%20am%20interested%20in%20your%20services."
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=zophion16@gmail.com"
           target="_blank"
           rel="noreferrer"
           style={iconStyle}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
         >
           <FaEnvelope color="#B22222" />
           <span style={labelStyle}>Gmail</span>
@@ -57,13 +77,41 @@ function Contact() {
 
         {/* Instagram */}
         <a
-          href="https://www.instagram.com/blyzza_herbs/"
+          href="https://www.instagram.com/zophion/"
           target="_blank"
           rel="noreferrer"
           style={iconStyle}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
         >
           <FaInstagram color="#dd2a7b" />
           <span style={labelStyle}>Instagram</span>
+        </a>
+
+        {/* LinkedIn */}
+        <a
+          href="https://www.linkedin.com/company/zophion-enterprises"
+          target="_blank"
+          rel="noreferrer"
+          style={iconStyle}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          <FaLinkedin color="#0077b5" />
+          <span style={labelStyle}>LinkedIn</span>
+        </a>
+
+        {/* Facebook */}
+        <a
+          href="https://www.facebook.com/zophionenterprises"
+          target="_blank"
+          rel="noreferrer"
+          style={iconStyle}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          <FaFacebook color="#1877F2" />
+          <span style={labelStyle}>Facebook</span>
         </a>
       </div>
 
@@ -80,6 +128,7 @@ function Contact() {
   );
 }
 
+// 👉 styles (component keela irukkum)
 const iconStyle = {
   display: "flex",
   flexDirection: "column",
