@@ -1,0 +1,83 @@
+.enquiry-container {
+  /* min-height: 100vh; */
+  background: radial-gradient(circle at top, #1b4f5c, #061a22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.enquiry-box {
+  width: 600px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #6fa3b8;
+  padding: 30px;
+  color: #ffffff;
+}
+
+.enquiry-box h2 {
+  text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 13px;
+  color: #cfd8dc;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  width: 160px;
+  font-size: 14px;
+  color: #d0e6ef;
+}
+
+.form-group input,
+.form-group textarea {
+  flex: 1;
+  background: transparent;
+  border: 1px solid #6fa3b8;
+  padding: 8px 10px;
+  color: #ffffff;
+  outline: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #9fbecb;
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 8px 22px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: #fff;
+}
+
+.btn.submit {
+  background-color: #f37021;
+}
+
+.btn.reset {
+  background-color: #e85b3a;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
