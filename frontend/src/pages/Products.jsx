@@ -39,7 +39,7 @@ function Products() {
           color: "#000",
         }}
       >
-        OUR SERVICES
+        OUR PRODUCT
       </h2>
 
 
@@ -92,7 +92,8 @@ function Products() {
           onMouseLeave={(e) =>
             (e.currentTarget.style.transform = "translateY(0)")
           }
-        >          <div style={imageBoxStyle}>
+        >
+          <div style={imageBoxStyle}>
             <img
               src="/blyzza.jpg"
               alt="Blyzza Cosmetics"

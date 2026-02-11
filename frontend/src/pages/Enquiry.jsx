@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import emailjs from "@emailjs/browser";
 
 function Enquiry() {
   const [formData, setFormData] = useState({
@@ -17,31 +16,42 @@ function Enquiry() {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    emailjs
-      .send(
-        "YOUR_SERVICE_ID",     // replace
-        "YOUR_TEMPLATE_ID",    // replace
-        formData,
-        "YOUR_PUBLIC_KEY"      // replace
-      )
-      .then(() => {
-        alert("Enquiry Sent Successfully!");
-        setFormData({
-          name: "",
-          email: "",
-          mobile: "",
-          service: "",
-          message: ""
-        });
-      })
-      .catch((error) => {
-        alert("Failed to send!");
-        console.log(error);
+  try {
+    const response = await fetch(
+      "https://zophion-backend.onrender.com/send-email",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      }
+    );
+
+    const data = await response.json();
+
+    if (response.ok) {
+      alert("Enquiry Sent Successfully!");
+      setFormData({
+        name: "",
+        email: "",
+        mobile: "",
+        service: "",
+        message: "",
       });
-  };
+    } else {
+      alert("Failed to send!");
+      console.log(data);
+    }
+  } catch (error) {
+    alert("Error sending enquiry!");
+    console.log(error);
+  }
+};
+
 
   return (
     <div style={styles.page}>
